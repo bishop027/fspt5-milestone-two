@@ -24,7 +24,16 @@ class Inhabitants {
     this.people = people;
   }
 
-  getPeopleOver(age) {}
+  getPeopleOver(age) {
+    // first attempt
+    // let olderPeople = people.filter(age => age >= 50);
+    // return (olderPeople + " ");
+
+    const olderPeople = inhabitants.filter(age => inhabitants.age > 50); // filter by age
+    return olderPeople.map(
+      age => `${inhabitants.firstName} + ${inhabitants.lastName}` + ", "
+    ); // return the filtered results, but only first name and last name
+  }
 }
 
 module.exports = Inhabitants;
